@@ -18,7 +18,14 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
+
+
+
+{for(UIView *view in self.view.subviews) { if([view isKindOfClass:[UILabel class]]) { UILabel *label = (UILabel *)view; label.font = [UIFont fontWithName:@"JOURNAL" size:label.font.pointSize]; } }
+   
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
