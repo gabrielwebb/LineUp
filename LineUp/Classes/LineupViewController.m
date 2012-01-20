@@ -20,6 +20,8 @@
         label.font = [UIFont fontWithName:@"JOURNAL" size:label.font.pointSize];
         label.textColor = [UIColor colorWithRed:8.0/255.0 green:100.0/255.0 blue:175.0/255.0 alpha:1.0];
     }
+	
+	_scrollView.contentSize = CGSizeMake(320, 460);
 }
 
 @end

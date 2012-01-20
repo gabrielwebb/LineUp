@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LineupViewController : UIViewController
+@interface LineupViewController : UIViewController <UIScrollViewDelegate>
 {
     IBOutletCollection(UILabel) NSArray *_journalLabels;
+	IBOutlet UIScrollView *_scrollView;
 }
 
 @end

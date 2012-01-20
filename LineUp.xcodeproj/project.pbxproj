@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FE247D714C9060000CBF975 /* BackgroundScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D514C9060000CBF975 /* BackgroundScroll.png */; };
+		1FE247D814C9060000CBF975 /* BackgroundScroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */; };
 		505666A814BE91F400B77812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505666A714BE91F400B77812 /* UIKit.framework */; };
 		505666AA14BE91F400B77812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505666A914BE91F400B77812 /* Foundation.framework */; };
 		505666AC14BE91F400B77812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505666AB14BE91F400B77812 /* CoreGraphics.framework */; };
@@ -48,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FE247D514C9060000CBF975 /* BackgroundScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundScroll.png; sourceTree = "<group>"; };
+		1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundScroll@2x.png"; sourceTree = "<group>"; };
 		505666A314BE91F400B77812 /* LineUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505666A714BE91F400B77812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		505666A914BE91F400B77812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -206,6 +210,8 @@
 			children = (
 				6E87CE7214C785250094D10C /* Background.png */,
 				6E87CE7314C785250094D10C /* Background@2x.png */,
+				1FE247D514C9060000CBF975 /* BackgroundScroll.png */,
+				1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */,
 				6E87CE7414C785250094D10C /* OptionsButton.png */,
 				6E87CE7514C785250094D10C /* OptionsButton@2x.png */,
 				6E87CE7D14C788B50094D10C /* OffButtonOff.png */,
@@ -288,7 +294,7 @@
 		5056669A14BE91F400B77812 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 5056669D14BE91F400B77812 /* Build configuration list for PBXProject "LineUp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -333,6 +339,8 @@
 				6E87CE8E14C788B50094D10C /* OnButtonOn@2x.png in Resources */,
 				6E87CE8F14C788B50094D10C /* OptionsBackground.png in Resources */,
 				6E87CE9014C788B50094D10C /* OptionsBackground@2x.png in Resources */,
+				1FE247D714C9060000CBF975 /* BackgroundScroll.png in Resources */,
+				1FE247D814C9060000CBF975 /* BackgroundScroll@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +406,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -416,6 +425,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -432,6 +442,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LineUp/LineUp-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "LineUp/LineUp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -443,6 +454,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LineUp/LineUp-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "LineUp/LineUp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
