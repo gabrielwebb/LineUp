@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OptionsViewController : UIViewController
+@interface IDOptionsViewController : UIViewController
 {
     IBOutlet UIButton *_offButton;
     IBOutlet UIButton *_onButton;

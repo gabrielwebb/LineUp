@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5D951A14C914B6009B2373 /* IDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */; };
 		1FE247D714C9060000CBF975 /* BackgroundScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D514C9060000CBF975 /* BackgroundScroll.png */; };
 		1FE247D814C9060000CBF975 /* BackgroundScroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */; };
 		505666A814BE91F400B77812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505666A714BE91F400B77812 /* UIKit.framework */; };
@@ -14,9 +15,9 @@
 		505666AC14BE91F400B77812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505666AB14BE91F400B77812 /* CoreGraphics.framework */; };
 		505666B214BE91F400B77812 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 505666B014BE91F400B77812 /* InfoPlist.strings */; };
 		505666B414BE91F400B77812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 505666B314BE91F400B77812 /* main.m */; };
-		505666B814BE91F400B77812 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 505666B714BE91F400B77812 /* AppDelegate.m */; };
+		505666B814BE91F400B77812 /* IDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 505666B714BE91F400B77812 /* IDAppDelegate.m */; };
 		505666BB14BE91F400B77812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505666B914BE91F400B77812 /* MainStoryboard.storyboard */; };
-		6E87CE6614C782A70094D10C /* LineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87CE5E14C782A70094D10C /* LineupViewController.m */; };
+		6E87CE6614C782A70094D10C /* IDLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87CE5E14C782A70094D10C /* IDLineupViewController.m */; };
 		6E87CE6714C782A70094D10C /* JOURNAL.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE6114C782A70094D10C /* JOURNAL.TTF */; };
 		6E87CE6C14C782EA0094D10C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE6A14C782EA0094D10C /* Default@2x.png */; };
 		6E87CE6D14C782EA0094D10C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE6B14C782EA0094D10C /* Icon@2x.png */; };
@@ -26,7 +27,7 @@
 		6E87CE7714C785250094D10C /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE7314C785250094D10C /* Background@2x.png */; };
 		6E87CE7814C785250094D10C /* OptionsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE7414C785250094D10C /* OptionsButton.png */; };
 		6E87CE7914C785250094D10C /* OptionsButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE7514C785250094D10C /* OptionsButton@2x.png */; };
-		6E87CE7C14C786570094D10C /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87CE7B14C786570094D10C /* OptionsViewController.m */; };
+		6E87CE7C14C786570094D10C /* IDOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87CE7B14C786570094D10C /* IDOptionsViewController.m */; };
 		6E87CE8714C788B50094D10C /* OffButtonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE7D14C788B50094D10C /* OffButtonOff.png */; };
 		6E87CE8814C788B50094D10C /* OffButtonOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE7E14C788B50094D10C /* OffButtonOff@2x.png */; };
 		6E87CE8914C788B50094D10C /* OffButtonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E87CE7F14C788B50094D10C /* OffButtonOn.png */; };
@@ -50,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F5D951814C914B6009B2373 /* IDRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDRefreshHeaderView.h; path = View/IDRefreshHeaderView.h; sourceTree = "<group>"; };
+		1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDRefreshHeaderView.m; path = View/IDRefreshHeaderView.m; sourceTree = "<group>"; };
 		1FE247D514C9060000CBF975 /* BackgroundScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundScroll.png; sourceTree = "<group>"; };
 		1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundScroll@2x.png"; sourceTree = "<group>"; };
 		505666A314BE91F400B77812 /* LineUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,11 +63,11 @@
 		505666B114BE91F400B77812 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		505666B314BE91F400B77812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		505666B514BE91F400B77812 /* LineUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LineUp-Prefix.pch"; sourceTree = "<group>"; };
-		505666B614BE91F400B77812 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		505666B714BE91F400B77812 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		505666B614BE91F400B77812 /* IDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDAppDelegate.h; sourceTree = "<group>"; };
+		505666B714BE91F400B77812 /* IDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDAppDelegate.m; sourceTree = "<group>"; };
 		505666BA14BE91F400B77812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6E87CE5D14C782A70094D10C /* LineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupViewController.h; sourceTree = "<group>"; };
-		6E87CE5E14C782A70094D10C /* LineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineupViewController.m; sourceTree = "<group>"; };
+		6E87CE5D14C782A70094D10C /* IDLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLineupViewController.h; sourceTree = "<group>"; };
+		6E87CE5E14C782A70094D10C /* IDLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLineupViewController.m; sourceTree = "<group>"; };
 		6E87CE6114C782A70094D10C /* JOURNAL.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = JOURNAL.TTF; sourceTree = "<group>"; };
 		6E87CE6A14C782EA0094D10C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6E87CE6B14C782EA0094D10C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -74,8 +77,8 @@
 		6E87CE7314C785250094D10C /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 		6E87CE7414C785250094D10C /* OptionsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButton.png; sourceTree = "<group>"; };
 		6E87CE7514C785250094D10C /* OptionsButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionsButton@2x.png"; sourceTree = "<group>"; };
-		6E87CE7A14C786570094D10C /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
-		6E87CE7B14C786570094D10C /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		6E87CE7A14C786570094D10C /* IDOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDOptionsViewController.h; sourceTree = "<group>"; };
+		6E87CE7B14C786570094D10C /* IDOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDOptionsViewController.m; sourceTree = "<group>"; };
 		6E87CE7D14C788B50094D10C /* OffButtonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OffButtonOff.png; sourceTree = "<group>"; };
 		6E87CE7E14C788B50094D10C /* OffButtonOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OffButtonOff@2x.png"; sourceTree = "<group>"; };
 		6E87CE7F14C788B50094D10C /* OffButtonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OffButtonOn.png; sourceTree = "<group>"; };
@@ -124,6 +127,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5D951614C9148B009B2373 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F5D951814C914B6009B2373 /* IDRefreshHeaderView.h */,
+				1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1F5D951714C91491009B2373 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5056669814BE91F400B77812 = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +175,8 @@
 			children = (
 				6E87CE5C14C782A70094D10C /* Classes */,
 				6E87CE5F14C782A70094D10C /* Resources */,
-				505666B614BE91F400B77812 /* AppDelegate.h */,
-				505666B714BE91F400B77812 /* AppDelegate.m */,
+				505666B614BE91F400B77812 /* IDAppDelegate.h */,
+				505666B714BE91F400B77812 /* IDAppDelegate.m */,
 				505666B914BE91F400B77812 /* MainStoryboard.storyboard */,
 				505666AE14BE91F400B77812 /* Supporting Files */,
 			);
@@ -178,11 +197,13 @@
 		6E87CE5C14C782A70094D10C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1F5D951714C91491009B2373 /* Model */,
+				1F5D951614C9148B009B2373 /* View */,
 				6E87CE9114C790770094D10C /* AFNetworking */,
-				6E87CE5D14C782A70094D10C /* LineupViewController.h */,
-				6E87CE5E14C782A70094D10C /* LineupViewController.m */,
-				6E87CE7A14C786570094D10C /* OptionsViewController.h */,
-				6E87CE7B14C786570094D10C /* OptionsViewController.m */,
+				6E87CE5D14C782A70094D10C /* IDLineupViewController.h */,
+				6E87CE5E14C782A70094D10C /* IDLineupViewController.m */,
+				6E87CE7A14C786570094D10C /* IDOptionsViewController.h */,
+				6E87CE7B14C786570094D10C /* IDOptionsViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -352,9 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				505666B414BE91F400B77812 /* main.m in Sources */,
-				505666B814BE91F400B77812 /* AppDelegate.m in Sources */,
-				6E87CE6614C782A70094D10C /* LineupViewController.m in Sources */,
-				6E87CE7C14C786570094D10C /* OptionsViewController.m in Sources */,
+				505666B814BE91F400B77812 /* IDAppDelegate.m in Sources */,
+				6E87CE6614C782A70094D10C /* IDLineupViewController.m in Sources */,
+				6E87CE7C14C786570094D10C /* IDOptionsViewController.m in Sources */,
 				6E87CEA814C790770094D10C /* AFHTTPClient.m in Sources */,
 				6E87CEA914C790770094D10C /* AFHTTPRequestOperation.m in Sources */,
 				6E87CEAA14C790770094D10C /* AFImageCache.m in Sources */,
@@ -365,6 +386,7 @@
 				6E87CEAF14C790770094D10C /* AFURLConnectionOperation.m in Sources */,
 				6E87CEB014C790770094D10C /* AFXMLRequestOperation.m in Sources */,
 				6E87CEB114C790770094D10C /* UIImageView+AFNetworking.m in Sources */,
+				1F5D951A14C914B6009B2373 /* IDRefreshHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

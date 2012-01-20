@@ -6,9 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "IDAppDelegate.h"
+#import "IDLineupViewController.h"
 
-@implementation AppDelegate
+@implementation IDAppDelegate
 
 @synthesize window = _window;
 
@@ -43,9 +44,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
+    IDLineupViewController *lineup = (IDLineupViewController *)_window.rootViewController;
+    [lineup reloadData];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

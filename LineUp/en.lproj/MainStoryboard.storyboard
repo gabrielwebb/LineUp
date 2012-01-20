@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2166" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1166"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
-        <!--Lineup View Controller-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController autoresizesArchivedViewToFullSize="NO" id="2" customClass="LineupViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="2" customClass="IDLineupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,7 +20,7 @@
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tsy-YB-a6A">
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" id="tsy-YB-a6A">
                                 <rect key="frame" x="0.0" y="1" width="320" height="459"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -179,6 +178,10 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="dCs-Ja-zL3">
+                                        <rect key="frame" x="292" y="8" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -189,7 +192,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="_activityIndicator" destination="dCs-Ja-zL3" id="1Pp-9i-s00"/>
                         <outlet property="_scrollView" destination="tsy-YB-a6A" id="LQa-0x-qzO"/>
+                        <outlet property="view" destination="3" id="RYO-oD-csN"/>
                         <outletCollection property="_journalLabels" destination="Kcu-Bn-StG" id="3DL-5b-1yp"/>
                         <outletCollection property="_journalLabels" destination="YV1-Ic-FFf" id="wvU-Hj-ioP"/>
                         <outletCollection property="_journalLabels" destination="E1q-Th-mlx" id="9y1-li-iFX"/>
@@ -214,11 +219,10 @@
             </objects>
             <point key="canvasLocation" x="-114" y="-267"/>
         </scene>
-        <!--Options View Controller-->
         <scene sceneID="FxU-nR-2jq">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-vr-dOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Uz5-iH-Cmr" customClass="OptionsViewController" sceneMemberID="viewController">
+                <viewController id="Uz5-iH-Cmr" customClass="IDOptionsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6A7-8C-1Wv">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -290,15 +294,16 @@
                 <relationship kind="action" name="action"/>
             </relationships>
         </class>
-        <class className="LineupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LineupViewController.h"/>
+        <class className="IDLineupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IDLineupViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="_activityIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="_scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outletCollection" name="_journalLabels" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="OptionsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OptionsViewController.h"/>
+        <class className="IDOptionsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IDOptionsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="tappedButton:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="_background" candidateClass="UIImageView"/>

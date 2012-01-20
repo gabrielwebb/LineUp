@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LineupViewController : UIViewController <UIScrollViewDelegate>
+@interface IDLineupViewController : UIViewController <UIScrollViewDelegate>
 {
     IBOutletCollection(UILabel) NSArray *_journalLabels;
 	IBOutlet UIScrollView *_scrollView;
+    IBOutlet UIActivityIndicatorView *_activityIndicator;
 }
+
+- (void) reloadData;
 
 @end

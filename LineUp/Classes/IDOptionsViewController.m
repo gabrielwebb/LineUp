@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 AKQA. All rights reserved.
 //
 
-#import "OptionsViewController.h"
+#import "IDOptionsViewController.h"
 
-@interface OptionsViewController ()
+@interface IDOptionsViewController ()
 
 - (void) enableNotifications;
 - (void) disableNotifications;
 
 @end
 
-@implementation OptionsViewController
+@implementation IDOptionsViewController
 
 - (void) viewDidLoad
 {
