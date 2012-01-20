@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F458BC414C92FF100BFF25D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC114C92FF100BFF25D /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1F458BC514C92FF100BFF25D /* UADeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC314C92FF100BFF25D /* UADeviceManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1F458BC814C9316600BFF25D /* IDAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC714C9316600BFF25D /* IDAppModel.m */; };
 		1F5D951A14C914B6009B2373 /* IDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */; };
 		1FE247D714C9060000CBF975 /* BackgroundScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D514C9060000CBF975 /* BackgroundScroll.png */; };
 		1FE247D814C9060000CBF975 /* BackgroundScroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */; };
@@ -51,6 +54,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F458BC014C92FF100BFF25D /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		1F458BC114C92FF100BFF25D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		1F458BC214C92FF100BFF25D /* UADeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UADeviceManager.h; sourceTree = "<group>"; };
+		1F458BC314C92FF100BFF25D /* UADeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UADeviceManager.m; sourceTree = "<group>"; };
+		1F458BC614C9316600BFF25D /* IDAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDAppModel.h; path = Model/IDAppModel.h; sourceTree = "<group>"; };
+		1F458BC714C9316600BFF25D /* IDAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDAppModel.m; path = Model/IDAppModel.m; sourceTree = "<group>"; };
 		1F5D951814C914B6009B2373 /* IDRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDRefreshHeaderView.h; path = View/IDRefreshHeaderView.h; sourceTree = "<group>"; };
 		1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDRefreshHeaderView.m; path = View/IDRefreshHeaderView.m; sourceTree = "<group>"; };
 		1FE247D514C9060000CBF975 /* BackgroundScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundScroll.png; sourceTree = "<group>"; };
@@ -127,6 +136,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F458BBD14C92CD000BFF25D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1F458BBF14C92FF100BFF25D /* UrbanAirship */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		1F458BBF14C92FF100BFF25D /* UrbanAirship */ = {
+			isa = PBXGroup;
+			children = (
+				1F458BC014C92FF100BFF25D /* NSData+Base64.h */,
+				1F458BC114C92FF100BFF25D /* NSData+Base64.m */,
+				1F458BC214C92FF100BFF25D /* UADeviceManager.h */,
+				1F458BC314C92FF100BFF25D /* UADeviceManager.m */,
+			);
+			name = UrbanAirship;
+			path = Utility/UrbanAirship;
+			sourceTree = "<group>";
+		};
 		1F5D951614C9148B009B2373 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +168,8 @@
 		1F5D951714C91491009B2373 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F458BC614C9316600BFF25D /* IDAppModel.h */,
+				1F458BC714C9316600BFF25D /* IDAppModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,6 +228,7 @@
 		6E87CE5C14C782A70094D10C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1F458BBD14C92CD000BFF25D /* Utility */,
 				1F5D951714C91491009B2373 /* Model */,
 				1F5D951614C9148B009B2373 /* View */,
 				6E87CE9114C790770094D10C /* AFNetworking */,
@@ -387,6 +419,9 @@
 				6E87CEB014C790770094D10C /* AFXMLRequestOperation.m in Sources */,
 				6E87CEB114C790770094D10C /* UIImageView+AFNetworking.m in Sources */,
 				1F5D951A14C914B6009B2373 /* IDRefreshHeaderView.m in Sources */,
+				1F458BC414C92FF100BFF25D /* NSData+Base64.m in Sources */,
+				1F458BC514C92FF100BFF25D /* UADeviceManager.m in Sources */,
+				1F458BC814C9316600BFF25D /* IDAppModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

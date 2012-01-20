@@ -15,8 +15,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Request push notifications
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
     return YES;
+}
+
+- (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"" applicationSecret:@""];
+    [manager registerDeviceToken:deviceToken];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

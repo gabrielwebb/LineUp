@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UADeviceManager.h"
 
-@interface IDAppDelegate : UIResponder <UIApplicationDelegate>
+@interface IDAppDelegate : UIResponder <UIApplicationDelegate, UADeviceManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
