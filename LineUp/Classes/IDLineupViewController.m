@@ -9,6 +9,8 @@
 #import "IDLineupViewController.h"
 #import "IDRefreshHeaderView.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface IDLineupViewController ()
 {
 @private
@@ -29,6 +31,15 @@
     {
         label.font = [UIFont fontWithName:@"JOURNAL" size:label.font.pointSize];
         label.textColor = [UIColor colorWithRed:8.0/255.0 green:100.0/255.0 blue:175.0/255.0 alpha:1.0];
+        
+        // Rotate slightly
+        int random = arc4random() % 3;
+
+        label.layer.anchorPoint = CGPointMake(0, 1);
+        label.transform = CGAffineTransformMakeRotation(-random * 0.0174532925);
+        
+        // Re-adjust the frame after rotation transformation (should probably take into account the angle, too)
+        label.frame = CGRectMake(label.frame.origin.x - (label.frame.size.width/2), label.frame.origin.y + (label.frame.size.height/2), label.frame.size.width, label.frame.size.height);
     }
 	
 	_scrollView.contentSize = CGSizeMake(320, 460);
