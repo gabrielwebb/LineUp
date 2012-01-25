@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IDTeamInfo.h"
 
 @interface IDAppModel : NSObject
+
+@property (nonatomic, strong) IDTeamInfo *currentTeamInfo;
 
 - (void) save;
 

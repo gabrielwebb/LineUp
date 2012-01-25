@@ -8,6 +8,7 @@
 
 #import "IDLineupViewController.h"
 #import "IDRefreshHeaderView.h"
+#import "AFNetworking.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -58,7 +59,30 @@
     _headerView.state = IDRefreshHeaderStateRefreshing;
 	[_activityIndicator startAnimating];
     
-    //TODO: Load data and setup state in completion block
+    // Load data and setup state in completion block
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.inkdryercreative.com/lineup/?feed=json"]];
+    AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        // Parse the results
+        NSLog(@"RESULTS ARE : %@", JSON);
+        NSArray *results = (NSArray *)JSON;
+        if([results count] > 0)
+        {
+            // Only the most recent entry will be used
+            NSDictionary *mostRecentEntry = [results objectAtIndex:0];
+        }
+        
+        // Update the view state
+        _refreshing = NO;
+        _headerView.state = IDRefreshHeaderStateNotReady;
+        [_activityIndicator stopAnimating];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+    }];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:op];
 }
 
 #pragma mark - ScrollView Delegate

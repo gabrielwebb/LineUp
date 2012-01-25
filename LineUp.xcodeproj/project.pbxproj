@@ -12,6 +12,8 @@
 		1F458BC814C9316600BFF25D /* IDAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC714C9316600BFF25D /* IDAppModel.m */; };
 		1F5D951A14C914B6009B2373 /* IDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */; };
 		1FB1F1E714CB856800D1F40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB1F1E614CB856800D1F40E /* QuartzCore.framework */; };
+		1FC168B214D09FBD00A0DC48 /* IDTeamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC168B114D09FBD00A0DC48 /* IDTeamInfo.m */; };
+		1FC168B614D0A23400A0DC48 /* IDPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC168B514D0A23400A0DC48 /* IDPlayerInfo.m */; };
 		1FE247D714C9060000CBF975 /* BackgroundScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D514C9060000CBF975 /* BackgroundScroll.png */; };
 		1FE247D814C9060000CBF975 /* BackgroundScroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */; };
 		505666A814BE91F400B77812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505666A714BE91F400B77812 /* UIKit.framework */; };
@@ -64,6 +66,10 @@
 		1F5D951814C914B6009B2373 /* IDRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDRefreshHeaderView.h; path = View/IDRefreshHeaderView.h; sourceTree = "<group>"; };
 		1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDRefreshHeaderView.m; path = View/IDRefreshHeaderView.m; sourceTree = "<group>"; };
 		1FB1F1E614CB856800D1F40E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1FC168B014D09FBD00A0DC48 /* IDTeamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDTeamInfo.h; path = Model/IDTeamInfo.h; sourceTree = "<group>"; };
+		1FC168B114D09FBD00A0DC48 /* IDTeamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDTeamInfo.m; path = Model/IDTeamInfo.m; sourceTree = "<group>"; };
+		1FC168B414D0A23400A0DC48 /* IDPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDPlayerInfo.h; path = Model/IDPlayerInfo.h; sourceTree = "<group>"; };
+		1FC168B514D0A23400A0DC48 /* IDPlayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDPlayerInfo.m; path = Model/IDPlayerInfo.m; sourceTree = "<group>"; };
 		1FE247D514C9060000CBF975 /* BackgroundScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundScroll.png; sourceTree = "<group>"; };
 		1FE247D614C9060000CBF975 /* BackgroundScroll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundScroll@2x.png"; sourceTree = "<group>"; };
 		505666A314BE91F400B77812 /* LineUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +179,10 @@
 			children = (
 				1F458BC614C9316600BFF25D /* IDAppModel.h */,
 				1F458BC714C9316600BFF25D /* IDAppModel.m */,
+				1FC168B014D09FBD00A0DC48 /* IDTeamInfo.h */,
+				1FC168B114D09FBD00A0DC48 /* IDTeamInfo.m */,
+				1FC168B414D0A23400A0DC48 /* IDPlayerInfo.h */,
+				1FC168B514D0A23400A0DC48 /* IDPlayerInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -426,6 +436,8 @@
 				1F458BC414C92FF100BFF25D /* NSData+Base64.m in Sources */,
 				1F458BC514C92FF100BFF25D /* UADeviceManager.m in Sources */,
 				1F458BC814C9316600BFF25D /* IDAppModel.m in Sources */,
+				1FC168B214D09FBD00A0DC48 /* IDTeamInfo.m in Sources */,
+				1FC168B614D0A23400A0DC48 /* IDPlayerInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

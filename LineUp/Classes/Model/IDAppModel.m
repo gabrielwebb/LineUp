@@ -10,11 +10,33 @@
 
 @implementation IDAppModel
 
+@synthesize currentTeamInfo = _currentTeamInfo;
+
 #pragma mark - NSCoding
 
 - (void) save
 {
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *teamInfoPath = [documentsPath stringByAppendingPathComponent:@"teamInfo"];
     
+    [NSKeyedArchiver archiveRootObject:self.currentTeamInfo toFile:teamInfoPath];
+}
+
+- (void) load
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *teamInfoPath = [documentsPath stringByAppendingPathComponent:@"teamInfo"];
+    
+    id obj = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:teamInfoPath]];
+    
+    if(obj)
+    {
+        self.currentTeamInfo = obj;
+    }
+    else
+    {
+        self.currentTeamInfo = [[IDTeamInfo alloc] init];
+    }
 }
 
 #pragma mark - Singleton Methods
@@ -26,6 +48,7 @@ static IDAppModel *_instance = nil;
     if (_instance == nil)
     {
         _instance = [[super allocWithZone:NULL] init];
+        [_instance load];
     }
     
     return _instance;
