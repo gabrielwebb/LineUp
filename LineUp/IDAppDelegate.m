@@ -23,8 +23,13 @@
 
 - (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
+#ifdef DEBUG
+    UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"Um2CcQYLT1e20Bu-HFIrOA" applicationSecret:@"kyekICebTaO9oczWplQgWg"];
+    [manager registerDeviceToken:deviceToken];
+#else
     UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"" applicationSecret:@""];
     [manager registerDeviceToken:deviceToken];
+#endif
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
