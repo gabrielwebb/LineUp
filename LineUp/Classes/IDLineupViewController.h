@@ -15,6 +15,9 @@
     IBOutlet UIActivityIndicatorView *_activityIndicator;
     
     IBOutlet UILabel *_opponentLabel;
+    IBOutlet UILabel *_dateLabel;
+    IBOutlet UIImageView *_homeImage;
+    IBOutlet UIImageView *_awayImage;
 }
 
 - (void) reloadData;

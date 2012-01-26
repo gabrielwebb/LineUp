@@ -51,6 +51,9 @@ static const int PLAYER_POS_TAG_START = 200;
         // Re-adjust the frame after rotation transformation (should probably take into account the angle, too)
         label.frame = CGRectMake(label.frame.origin.x - (label.frame.size.width/2), label.frame.origin.y + (label.frame.size.height/2), label.frame.size.width, label.frame.size.height);
     }
+    
+    _dateLabel.font = [UIFont fontWithName:@"Avenir" size:13.0];
+    _dateLabel.text = @"";
 	
 	_scrollView.contentSize = CGSizeMake(320, 460);
     _scrollView.delegate = self;
@@ -60,6 +63,23 @@ static const int PLAYER_POS_TAG_START = 200;
 	[_scrollView addSubview:_headerView];
     
     [self updateContent];
+    
+    // Animate open the default image
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    imageView.frame = CGRectMake(-320/2, -20, 320, 480);
+    [self.view addSubview:imageView];
+    
+    [UIView animateWithDuration:1.3 animations:^{
+        imageView.layer.anchorPoint = CGPointMake(0, 0.5);
+        
+        CATransform3D transform = CATransform3DMakeRotation(-90 * 0.0174532925, 0, 1, 0);
+        transform = CATransform3DScale(transform, 1, 1.2, 1);
+        transform = CATransform3DTranslate(transform, 0, 0, 30);
+        imageView.layer.transform = transform;
+        
+    } completion:^(BOOL finished) {
+        [imageView removeFromSuperview];
+    }];
 }
 
 #pragma mark - Lineup Data
@@ -156,6 +176,18 @@ static const int PLAYER_POS_TAG_START = 200;
     IDTeamInfo *team = [IDAppModel sharedModel].currentTeamInfo;
     
     _opponentLabel.text = team.opponentName;
+    _dateLabel.text = team.gameDateString;
+    
+    if(team.isHome)
+    {
+        _homeImage.hidden = NO;
+        _awayImage.hidden = YES;
+    }
+    else
+    {
+        _homeImage.hidden = YES;
+        _homeImage.hidden = NO;
+    }
     
     for(IDPlayerInfo *player in team.lineup)
     {

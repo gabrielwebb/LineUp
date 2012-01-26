@@ -43,6 +43,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>JOURNAL.TTF</string>
+		<string>Avenir Medium.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>

@@ -11,6 +11,9 @@
 		1F458BC514C92FF100BFF25D /* UADeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC314C92FF100BFF25D /* UADeviceManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1F458BC814C9316600BFF25D /* IDAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC714C9316600BFF25D /* IDAppModel.m */; };
 		1F5D951A14C914B6009B2373 /* IDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */; };
+		1F959EBD14D0FB0600CEDDF5 /* Avenir Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F959EBC14D0FB0600CEDDF5 /* Avenir Medium.otf */; };
+		1F959EC114D0FCD000CEDDF5 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F959EBF14D0FCD000CEDDF5 /* Circle.png */; };
+		1F959EC214D0FCD000CEDDF5 /* Circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F959EC014D0FCD000CEDDF5 /* Circle@2x.png */; };
 		1FB1F1E714CB856800D1F40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB1F1E614CB856800D1F40E /* QuartzCore.framework */; };
 		1FC168B214D09FBD00A0DC48 /* IDTeamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC168B114D09FBD00A0DC48 /* IDTeamInfo.m */; };
 		1FC168B614D0A23400A0DC48 /* IDPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC168B514D0A23400A0DC48 /* IDPlayerInfo.m */; };
@@ -65,6 +68,9 @@
 		1F458BC714C9316600BFF25D /* IDAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDAppModel.m; path = Model/IDAppModel.m; sourceTree = "<group>"; };
 		1F5D951814C914B6009B2373 /* IDRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDRefreshHeaderView.h; path = View/IDRefreshHeaderView.h; sourceTree = "<group>"; };
 		1F5D951914C914B6009B2373 /* IDRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDRefreshHeaderView.m; path = View/IDRefreshHeaderView.m; sourceTree = "<group>"; };
+		1F959EBC14D0FB0600CEDDF5 /* Avenir Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Medium.otf"; sourceTree = "<group>"; };
+		1F959EBF14D0FCD000CEDDF5 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
+		1F959EC014D0FCD000CEDDF5 /* Circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle@2x.png"; sourceTree = "<group>"; };
 		1FB1F1E614CB856800D1F40E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1FC168B014D09FBD00A0DC48 /* IDTeamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDTeamInfo.h; path = Model/IDTeamInfo.h; sourceTree = "<group>"; };
 		1FC168B114D09FBD00A0DC48 /* IDTeamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDTeamInfo.m; path = Model/IDTeamInfo.m; sourceTree = "<group>"; };
@@ -268,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				6E87CE6114C782A70094D10C /* JOURNAL.TTF */,
+				1F959EBC14D0FB0600CEDDF5 /* Avenir Medium.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -291,6 +298,8 @@
 				6E87CE8414C788B50094D10C /* OnButtonOn@2x.png */,
 				6E87CE8514C788B50094D10C /* OptionsBackground.png */,
 				6E87CE8614C788B50094D10C /* OptionsBackground@2x.png */,
+				1F959EBF14D0FCD000CEDDF5 /* Circle.png */,
+				1F959EC014D0FCD000CEDDF5 /* Circle@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -408,6 +417,9 @@
 				6E87CE9014C788B50094D10C /* OptionsBackground@2x.png in Resources */,
 				1FE247D714C9060000CBF975 /* BackgroundScroll.png in Resources */,
 				1FE247D814C9060000CBF975 /* BackgroundScroll@2x.png in Resources */,
+				1F959EBD14D0FB0600CEDDF5 /* Avenir Medium.otf in Resources */,
+				1F959EC114D0FCD000CEDDF5 /* Circle.png in Resources */,
+				1F959EC214D0FCD000CEDDF5 /* Circle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

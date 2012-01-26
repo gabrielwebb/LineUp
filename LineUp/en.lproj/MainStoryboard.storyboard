@@ -182,6 +182,21 @@
                                         <rect key="frame" x="292" y="8" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="date" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="m1N-JY-qjW">
+                                        <rect key="frame" x="52" y="55" width="216" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="Circle.png" id="SpE-Tm-AoF">
+                                        <rect key="frame" x="49" y="79" width="41" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="Circle.png" id="zdZ-vN-JrI">
+                                        <rect key="frame" x="90" y="79" width="41" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -193,6 +208,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="_activityIndicator" destination="dCs-Ja-zL3" id="1Pp-9i-s00"/>
+                        <outlet property="_awayImage" destination="zdZ-vN-JrI" id="PyH-pP-Ls7"/>
+                        <outlet property="_dateLabel" destination="m1N-JY-qjW" id="hQD-Za-zt1"/>
+                        <outlet property="_homeImage" destination="SpE-Tm-AoF" id="Zdy-hO-s52"/>
                         <outlet property="_opponentLabel" destination="Kcu-Bn-StG" id="0q7-NW-Wvs"/>
                         <outlet property="_scrollView" destination="tsy-YB-a6A" id="LQa-0x-qzO"/>
                         <outlet property="view" destination="3" id="RYO-oD-csN"/>
@@ -281,6 +299,7 @@
     <resources>
         <image name="Background.png" width="320" height="460"/>
         <image name="BackgroundScroll.png" width="320" height="460"/>
+        <image name="Circle.png" width="41" height="24"/>
         <image name="OffButtonOff.png" width="86" height="86"/>
         <image name="OffButtonOn.png" width="86" height="86"/>
         <image name="OnButtonOff.png" width="86" height="86"/>
@@ -299,6 +318,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IDLineupViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="_activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="_awayImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="_dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_homeImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="_opponentLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="_scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outletCollection" name="_journalLabels" candidateClass="UILabel"/>
