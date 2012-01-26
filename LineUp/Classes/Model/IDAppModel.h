@@ -15,4 +15,6 @@
 
 - (void) save;
 
++ (IDAppModel *) sharedModel;
+
 @end

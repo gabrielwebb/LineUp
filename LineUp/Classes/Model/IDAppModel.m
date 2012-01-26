@@ -43,7 +43,7 @@
 
 static IDAppModel *_instance = nil;
 
-+ (IDAppModel *) sharedManager
++ (IDAppModel *) sharedModel
 {
     if (_instance == nil)
     {
@@ -56,7 +56,7 @@ static IDAppModel *_instance = nil;
 
 + (id) allocWithZone:(NSZone *)zone
 {
-    return [self sharedManager];
+    return [self sharedModel];
 }
 
 - (id) copyWithZone:(NSZone *)zone

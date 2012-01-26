@@ -9,6 +9,9 @@
 #import "IDLineupViewController.h"
 #import "IDRefreshHeaderView.h"
 #import "AFNetworking.h"
+#import "IDAppModel.h"
+#import "IDTeamInfo.h"
+#import "IDPlayerInfo.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -18,6 +21,8 @@
     IDRefreshHeaderView *_headerView;
     BOOL _refreshing;
 }
+
+- (void) updateContent;
 
 @end
 
@@ -49,6 +54,8 @@
 	// Create the pull to refresh view
 	_headerView = [[IDRefreshHeaderView alloc] initWithFrame:CGRectMake(0, -101, 320, 100)];
 	[_scrollView addSubview:_headerView];
+    
+    [self updateContent];
 }
 
 #pragma mark - Lineup Data
@@ -64,12 +71,57 @@
     AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
         // Parse the results
-        NSLog(@"RESULTS ARE : %@", JSON);
+        //NSLog(@"RESULTS ARE : %@", JSON);
         NSArray *results = (NSArray *)JSON;
         if([results count] > 0)
         {
             // Only the most recent entry will be used
             NSDictionary *mostRecentEntry = [results objectAtIndex:0];
+            int entryPostID = [[mostRecentEntry objectForKey:@"id"] intValue];
+            
+            IDTeamInfo *cachedTeam = [IDAppModel sharedModel].currentTeamInfo;
+            if(cachedTeam.postID != entryPostID)
+            {
+                // Grab the content JSON and remove all the garbage
+                NSString *content = [mostRecentEntry objectForKey:@"content"];
+                content = [content stringByReplacingOccurrencesOfString:@"<div>" withString:@""];
+                content = [content stringByReplacingOccurrencesOfString:@"</div>" withString:@""];
+                content = [content stringByReplacingOccurrencesOfString:@"\\U00a0" withString:@""];
+                content = [content stringByReplacingOccurrencesOfString:@"\\U2022" withString:@""];
+                content = [content stringByReplacingOccurrencesOfString:@" " withString:@""];
+                
+                NSDictionary *contentJSON = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
+                
+                NSString *dateString = [contentJSON objectForKey:@"date"];
+                BOOL isHome = [[contentJSON objectForKey:@"gabp"] isEqualToString:@"yes"];
+                NSString *opponent = [contentJSON objectForKey:@"opponent"];
+                
+                int index = 0;
+                NSMutableArray *tempLineup = [[NSMutableArray alloc] init];
+                for(NSDictionary *playerJSON in [contentJSON objectForKey:@"lineup"])
+                {
+                    IDPlayerInfo *player = [[IDPlayerInfo alloc] init];
+                    player.playerName = [playerJSON objectForKey:@"name"];
+                    player.playerPosition = [[playerJSON objectForKey:@"pos"] intValue];
+                    player.playerIndex = index;
+                    
+                    index++;
+                    [tempLineup addObject:player];
+                }
+                
+                IDTeamInfo *team = [[IDTeamInfo alloc] init];
+                team.postID = entryPostID;
+                team.teamName = @"Reds"; //TODO: Support multiple teams
+                team.gameDateString = dateString;
+                team.opponentName = opponent;
+                team.isHome = isHome;
+                team.lineup = tempLineup;
+                
+                [IDAppModel sharedModel].currentTeamInfo = team;
+                [[IDAppModel sharedModel] save];
+                
+                [self updateContent];
+            }
         }
         
         // Update the view state
@@ -79,10 +131,24 @@
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         
+        // Display an error
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"There was a problem updating the lineup, please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        // Update the view state
+        _refreshing = NO;
+        _headerView.state = IDRefreshHeaderStateNotReady;
+        [_activityIndicator stopAnimating];
     }];
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:op];
+}
+
+- (void) updateContent
+{
+    IDTeamInfo *team = [IDAppModel sharedModel].currentTeamInfo;
+    NSLog(@"SET TEAM : %@", team.teamName);
 }
 
 #pragma mark - ScrollView Delegate
