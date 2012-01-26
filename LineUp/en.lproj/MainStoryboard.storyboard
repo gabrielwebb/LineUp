@@ -52,126 +52,126 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Bruce" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="YV1-Ic-FFf">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" text="Bruce" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="YV1-Ic-FFf">
                                         <rect key="frame" x="78" y="134" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="E1q-Th-mlx">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" text="1" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="E1q-Th-mlx">
                                         <rect key="frame" x="235" y="134" width="45" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Votto" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="136-jZ-BQn">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" text="Votto" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="136-jZ-BQn">
                                         <rect key="frame" x="78" y="163" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="2" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="4h3-ZW-6Gz">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" text="2" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="4h3-ZW-6Gz">
                                         <rect key="frame" x="235" y="163" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="dzx-YR-PJs">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="dzx-YR-PJs">
                                         <rect key="frame" x="78" y="191" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="3" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="Vcc-iV-4ZK">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="202" contentMode="left" text="3" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="Vcc-iV-4ZK">
                                         <rect key="frame" x="235" y="191" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="p4a-QI-pqY">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="p4a-QI-pqY">
                                         <rect key="frame" x="78" y="220" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="4" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="eYU-Wb-Nqx">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="203" contentMode="left" text="4" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="eYU-Wb-Nqx">
                                         <rect key="frame" x="235" y="220" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="iXE-om-HRw">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="iXE-om-HRw">
                                         <rect key="frame" x="78" y="248" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="5" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="WZf-vw-4Cy">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="204" contentMode="left" text="5" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="WZf-vw-4Cy">
                                         <rect key="frame" x="235" y="248" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="hjN-42-UoK">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="hjN-42-UoK">
                                         <rect key="frame" x="78" y="277" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="6" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="fPM-bw-SY8">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="205" contentMode="left" text="6" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="fPM-bw-SY8">
                                         <rect key="frame" x="235" y="277" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="7" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="7F2-Np-Ae3">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="206" contentMode="left" text="7" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="7F2-Np-Ae3">
                                         <rect key="frame" x="235" y="305" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="V6a-TC-x6K">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="V6a-TC-x6K">
                                         <rect key="frame" x="78" y="305" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="8" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="R84-pu-hWz">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="207" contentMode="left" text="8" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="R84-pu-hWz">
                                         <rect key="frame" x="235" y="334" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="gA0-ei-ZJl">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="gA0-ei-ZJl">
                                         <rect key="frame" x="78" y="334" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="9" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="TV6-jP-fUA">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="208" contentMode="left" text="9" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="TV6-jP-fUA">
                                         <rect key="frame" x="235" y="362" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="z4h-gf-Rb2">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="z4h-gf-Rb2">
                                         <rect key="frame" x="78" y="362" width="151" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -193,6 +193,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="_activityIndicator" destination="dCs-Ja-zL3" id="1Pp-9i-s00"/>
+                        <outlet property="_opponentLabel" destination="Kcu-Bn-StG" id="0q7-NW-Wvs"/>
                         <outlet property="_scrollView" destination="tsy-YB-a6A" id="LQa-0x-qzO"/>
                         <outlet property="view" destination="3" id="RYO-oD-csN"/>
                         <outletCollection property="_journalLabels" destination="Kcu-Bn-StG" id="3DL-5b-1yp"/>
@@ -298,6 +299,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IDLineupViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="_activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="_opponentLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="_scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outletCollection" name="_journalLabels" candidateClass="UILabel"/>
             </relationships>

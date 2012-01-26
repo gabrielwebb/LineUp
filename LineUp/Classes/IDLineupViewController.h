@@ -13,6 +13,8 @@
     IBOutletCollection(UILabel) NSArray *_journalLabels;
 	IBOutlet UIScrollView *_scrollView;
     IBOutlet UIActivityIndicatorView *_activityIndicator;
+    
+    IBOutlet UILabel *_opponentLabel;
 }
 
 - (void) reloadData;

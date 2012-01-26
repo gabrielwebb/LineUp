@@ -15,6 +15,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+static const int PLAYER_NAME_TAG_START = 100;
+static const int PLAYER_POS_TAG_START = 200;
+
 @interface IDLineupViewController ()
 {
 @private
@@ -35,6 +38,7 @@
     // Set every label's font to Journal
     for(UILabel *label in _journalLabels)
     {
+        label.text = @"";
         label.font = [UIFont fontWithName:@"JOURNAL" size:label.font.pointSize];
         label.textColor = [UIColor colorWithRed:8.0/255.0 green:100.0/255.0 blue:175.0/255.0 alpha:1.0];
         
@@ -65,13 +69,13 @@
     _refreshing = YES;
     _headerView.state = IDRefreshHeaderStateRefreshing;
 	[_activityIndicator startAnimating];
+    _scrollView.delegate = nil;
     
     // Load data and setup state in completion block
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.inkdryercreative.com/lineup/?feed=json"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.inkdryercreative.com/lineup/?feed=json&time=%d", [[NSDate date] timeIntervalSince1970]]]];
     AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        
+
         // Parse the results
-        //NSLog(@"RESULTS ARE : %@", JSON);
         NSArray *results = (NSArray *)JSON;
         if([results count] > 0)
         {
@@ -128,6 +132,7 @@
         _refreshing = NO;
         _headerView.state = IDRefreshHeaderStateNotReady;
         [_activityIndicator stopAnimating];
+        _scrollView.delegate = self;
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         
@@ -139,6 +144,7 @@
         _refreshing = NO;
         _headerView.state = IDRefreshHeaderStateNotReady;
         [_activityIndicator stopAnimating];
+        _scrollView.delegate = self;
     }];
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
@@ -148,7 +154,17 @@
 - (void) updateContent
 {
     IDTeamInfo *team = [IDAppModel sharedModel].currentTeamInfo;
-    NSLog(@"SET TEAM : %@", team.teamName);
+    
+    _opponentLabel.text = team.opponentName;
+    
+    for(IDPlayerInfo *player in team.lineup)
+    {
+        UILabel *nameLabel = (UILabel *)[self.view viewWithTag:PLAYER_NAME_TAG_START + player.playerIndex];
+        UILabel *posLabel = (UILabel *)[self.view viewWithTag:PLAYER_POS_TAG_START + player.playerIndex];
+        
+        nameLabel.text = player.playerName;
+        posLabel.text = [NSString stringWithFormat:@"%d", player.playerPosition];
+    }
 }
 
 #pragma mark - ScrollView Delegate
