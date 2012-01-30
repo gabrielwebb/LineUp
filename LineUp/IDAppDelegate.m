@@ -27,7 +27,7 @@
     UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"Um2CcQYLT1e20Bu-HFIrOA" applicationSecret:@"kyekICebTaO9oczWplQgWg"];
     [manager registerDeviceToken:deviceToken];
 #else
-    UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"" applicationSecret:@""];
+    UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"kwLyELSITwW_OrIdHOB5wg" applicationSecret:@"DOt2cOo7SrGJT515jH-VNw"];
     [manager registerDeviceToken:deviceToken];
 #endif
 }
