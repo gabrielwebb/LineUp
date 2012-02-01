@@ -12,6 +12,7 @@
 #import "IDAppModel.h"
 #import "IDTeamInfo.h"
 #import "IDPlayerInfo.h"
+#import "UIView+IDAdditions.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -23,6 +24,7 @@ static const int PLAYER_POS_TAG_START = 200;
 @private
     IDRefreshHeaderView *_headerView;
     BOOL _refreshing;
+    UIView *_defaultImage;
 }
 
 - (void) updateContent;
@@ -45,11 +47,11 @@ static const int PLAYER_POS_TAG_START = 200;
         // Rotate slightly
         int random = arc4random() % 3;
 
-        label.layer.anchorPoint = CGPointMake(0, 1);
+        label.transformationPoint = CGPointMake(0, 1);
         label.transform = CGAffineTransformMakeRotation(-random * 0.0174532925);
         
         // Re-adjust the frame after rotation transformation (should probably take into account the angle, too)
-        label.frame = CGRectMake(label.frame.origin.x - (label.frame.size.width/2), label.frame.origin.y + (label.frame.size.height/2), label.frame.size.width, label.frame.size.height);
+        //label.frame = CGRectMake(label.frame.origin.x - (label.frame.size.width/2), label.frame.origin.y + (label.frame.size.height/2), label.frame.size.width, label.frame.size.height);
     }
     
     _dateLabel.font = [UIFont fontWithName:@"Avenir" size:13.0];
@@ -65,21 +67,36 @@ static const int PLAYER_POS_TAG_START = 200;
     [self updateContent];
     
     // Animate open the default image
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
-    imageView.frame = CGRectMake(-320/2, -20, 320, 480);
-    [self.view addSubview:imageView];
+    _defaultImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+    _defaultImage.frame = CGRectMake(0, -20, 320, 480);
+    [self.view addSubview:_defaultImage];
     
+    
+    /*
     [UIView animateWithDuration:1.3 animations:^{
-        imageView.layer.anchorPoint = CGPointMake(0, 0.5);
+        imageView.transformationPoint = CGPointMake(0, 0.5);
         
         CATransform3D transform = CATransform3DMakeRotation(-90 * 0.0174532925, 0, 1, 0);
         transform = CATransform3DScale(transform, 1, 1.2, 1);
-        transform = CATransform3DTranslate(transform, 0, 0, 30);
+        //transform = CATransform3DTranslate(transform, 0, 0, 30);
         imageView.layer.transform = transform;
         
     } completion:^(BOOL finished) {
         [imageView removeFromSuperview];
     }];
+     */
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    if(_defaultImage)
+    {
+        [UIView transitionWithView:self.view duration:1.0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+            [_defaultImage removeFromSuperview];
+        } completion:^(BOOL finished) {
+            _defaultImage = nil;
+        }];
+    }
 }
 
 #pragma mark - Lineup Data
