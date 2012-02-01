@@ -49,14 +49,13 @@ static const int PLAYER_POS_TAG_START = 200;
 
         label.transformationPoint = CGPointMake(0, 1);
         label.transform = CGAffineTransformMakeRotation(-random * 0.0174532925);
-        
-        // Re-adjust the frame after rotation transformation (should probably take into account the angle, too)
-        //label.frame = CGRectMake(label.frame.origin.x - (label.frame.size.width/2), label.frame.origin.y + (label.frame.size.height/2), label.frame.size.width, label.frame.size.height);
     }
     
+    // Set the date label's font
     _dateLabel.font = [UIFont fontWithName:@"Avenir" size:13.0];
     _dateLabel.text = @"";
 	
+    // Set the size of the scrollview so it can scroll vertically
 	_scrollView.contentSize = CGSizeMake(320, 460);
     _scrollView.delegate = self;
 	
@@ -64,31 +63,18 @@ static const int PLAYER_POS_TAG_START = 200;
 	_headerView = [[IDRefreshHeaderView alloc] initWithFrame:CGRectMake(0, -101, 320, 100)];
 	[_scrollView addSubview:_headerView];
     
+    // Set the labels based on cached data
     [self updateContent];
     
-    // Animate open the default image
+    // Add the default image so we can animate it
     _defaultImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
     _defaultImage.frame = CGRectMake(0, -20, 320, 480);
     [self.view addSubview:_defaultImage];
-    
-    
-    /*
-    [UIView animateWithDuration:1.3 animations:^{
-        imageView.transformationPoint = CGPointMake(0, 0.5);
-        
-        CATransform3D transform = CATransform3DMakeRotation(-90 * 0.0174532925, 0, 1, 0);
-        transform = CATransform3DScale(transform, 1, 1.2, 1);
-        //transform = CATransform3DTranslate(transform, 0, 0, 30);
-        imageView.layer.transform = transform;
-        
-    } completion:^(BOOL finished) {
-        [imageView removeFromSuperview];
-    }];
-     */
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    // When the view first appears, curl up the default image
     if(_defaultImage)
     {
         [UIView transitionWithView:self.view duration:1.0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
