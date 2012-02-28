@@ -60,7 +60,7 @@ static const int PLAYER_POS_TAG_START = 200;
     _scrollView.delegate = self;
 	
 	// Create the pull to refresh view
-	_headerView = [[IDRefreshHeaderView alloc] initWithFrame:CGRectMake(0, -101, 320, 100)];
+	_headerView = [[IDRefreshHeaderView alloc] initWithFrame:CGRectMake(0, -51, 320, 50)];
 	[_scrollView addSubview:_headerView];
     
     // Set the labels based on cached data

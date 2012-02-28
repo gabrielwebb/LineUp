@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1F118C7414D8C2BA00357394 /* UIView+IDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F118C7314D8C2BA00357394 /* UIView+IDAdditions.m */; };
+		1F18833714FC89AB009D7831 /* RefreshArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F18833314FC89AB009D7831 /* RefreshArrow.png */; };
+		1F18833814FC89AB009D7831 /* RefreshArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F18833414FC89AB009D7831 /* RefreshArrow@2x.png */; };
+		1F18833914FC89AB009D7831 /* RefreshText.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F18833514FC89AB009D7831 /* RefreshText.png */; };
+		1F18833A14FC89AB009D7831 /* RefreshText@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F18833614FC89AB009D7831 /* RefreshText@2x.png */; };
 		1F458BC414C92FF100BFF25D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC114C92FF100BFF25D /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1F458BC514C92FF100BFF25D /* UADeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC314C92FF100BFF25D /* UADeviceManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1F458BC814C9316600BFF25D /* IDAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F458BC714C9316600BFF25D /* IDAppModel.m */; };
@@ -63,6 +67,10 @@
 /* Begin PBXFileReference section */
 		1F118C7214D8C2BA00357394 /* UIView+IDAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+IDAdditions.h"; path = "View/UIView+IDAdditions.h"; sourceTree = "<group>"; };
 		1F118C7314D8C2BA00357394 /* UIView+IDAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+IDAdditions.m"; path = "View/UIView+IDAdditions.m"; sourceTree = "<group>"; };
+		1F18833314FC89AB009D7831 /* RefreshArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshArrow.png; sourceTree = "<group>"; };
+		1F18833414FC89AB009D7831 /* RefreshArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshArrow@2x.png"; sourceTree = "<group>"; };
+		1F18833514FC89AB009D7831 /* RefreshText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshText.png; sourceTree = "<group>"; };
+		1F18833614FC89AB009D7831 /* RefreshText@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshText@2x.png"; sourceTree = "<group>"; };
 		1F458BC014C92FF100BFF25D /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		1F458BC114C92FF100BFF25D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		1F458BC214C92FF100BFF25D /* UADeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UADeviceManager.h; sourceTree = "<group>"; };
@@ -305,6 +313,10 @@
 				6E87CE8614C788B50094D10C /* OptionsBackground@2x.png */,
 				1F959EBF14D0FCD000CEDDF5 /* Circle.png */,
 				1F959EC014D0FCD000CEDDF5 /* Circle@2x.png */,
+				1F18833314FC89AB009D7831 /* RefreshArrow.png */,
+				1F18833414FC89AB009D7831 /* RefreshArrow@2x.png */,
+				1F18833514FC89AB009D7831 /* RefreshText.png */,
+				1F18833614FC89AB009D7831 /* RefreshText@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -425,6 +437,10 @@
 				1F959EBD14D0FB0600CEDDF5 /* Avenir Medium.otf in Resources */,
 				1F959EC114D0FCD000CEDDF5 /* Circle.png in Resources */,
 				1F959EC214D0FCD000CEDDF5 /* Circle@2x.png in Resources */,
+				1F18833714FC89AB009D7831 /* RefreshArrow.png in Resources */,
+				1F18833814FC89AB009D7831 /* RefreshArrow@2x.png in Resources */,
+				1F18833914FC89AB009D7831 /* RefreshText.png in Resources */,
+				1F18833A14FC89AB009D7831 /* RefreshText@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

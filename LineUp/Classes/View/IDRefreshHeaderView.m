@@ -11,7 +11,8 @@
 @interface IDRefreshHeaderView ()
 {
 @private
-    UILabel *_statusLabel;
+    UIImageView *_textImage;
+    UIImageView *_arrowImage;
 }
 @end
 
@@ -26,11 +27,13 @@
     self = [super initWithFrame:frame];
     if (self)
 	{
-        _statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, frame.size.width, 30)];
-        _statusLabel.backgroundColor = [UIColor clearColor];
-        _statusLabel.textAlignment = UITextAlignmentCenter;
-        _statusLabel.text = @"Pull to refresh";
-        [self addSubview:_statusLabel];
+        _textImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"RefreshText.png"]];
+        _textImage.center = CGPointMake(roundf(frame.size.width/2.0) + 10, roundf(frame.size.height/2.0));
+        [self addSubview:_textImage];
+        
+        _arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"RefreshArrow.png"]];
+        _arrowImage.center = CGPointMake(roundf(frame.size.width/2.0) - 50, roundf(frame.size.height/2.0));
+        [self addSubview:_arrowImage];
     }
     return self;
 }
@@ -43,13 +46,25 @@
 		switch (state)
 		{
 			case IDRefreshHeaderStateNotReady:
-				_statusLabel.text = @"Pull to refresh";
+            {
+                [UIView animateWithDuration:0.2 animations:^{
+                    _arrowImage.transform = CGAffineTransformIdentity;
+                }];
+            }
 				break;
 			case IDRefreshHeaderStateReady:
-				_statusLabel.text = @"Release";
+            {
+                [UIView animateWithDuration:0.2 animations:^{
+                    _arrowImage.transform = CGAffineTransformMakeRotation(M_PI - .001);
+                }];
+            }
 				break;
 			case IDRefreshHeaderStateRefreshing:
-				_statusLabel.text = @"Refreshing...";
+            {
+                [UIView animateWithDuration:0.2 animations:^{
+                    _arrowImage.transform = CGAffineTransformIdentity;
+                }];
+            }
 				break;
 			default:
 				break;
