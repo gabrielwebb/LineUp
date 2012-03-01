@@ -28,6 +28,7 @@ static const int PLAYER_POS_TAG_START = 200;
 }
 
 - (void) updateContent;
+- (void)addPadding:(CGFloat)padding toLabel:(UILabel *)label;
 
 @end
 
@@ -43,6 +44,7 @@ static const int PLAYER_POS_TAG_START = 200;
         label.text = @"";
         label.font = [UIFont fontWithName:@"JOURNAL" size:label.font.pointSize];
         label.textColor = [UIColor colorWithRed:8.0/255.0 green:100.0/255.0 blue:175.0/255.0 alpha:1.0];
+        [self addPadding:10.0 toLabel:label];
         
         // Rotate slightly
         int random = arc4random() % 3;
@@ -52,7 +54,7 @@ static const int PLAYER_POS_TAG_START = 200;
     }
     
     // Set the date label's font
-    _dateLabel.font = [UIFont fontWithName:@"Avenir" size:13.0];
+    _dateLabel.font = [UIFont fontWithName:@"Avenir" size:15.0];
     _dateLabel.text = @"";
 	
     // Set the size of the scrollview so it can scroll vertically
@@ -178,7 +180,7 @@ static const int PLAYER_POS_TAG_START = 200;
 {
     IDTeamInfo *team = [IDAppModel sharedModel].currentTeamInfo;
     
-    _opponentLabel.text = team.opponentName;
+    _opponentLabel.text = [NSString stringWithFormat:@" %@", team.opponentName];
     _dateLabel.text = team.gameDateString;
     
     if(team.isHome)
@@ -197,7 +199,7 @@ static const int PLAYER_POS_TAG_START = 200;
         UILabel *nameLabel = (UILabel *)[self.view viewWithTag:PLAYER_NAME_TAG_START + player.playerIndex];
         UILabel *posLabel = (UILabel *)[self.view viewWithTag:PLAYER_POS_TAG_START + player.playerIndex];
         
-        nameLabel.text = player.playerName;
+        nameLabel.text = [NSString stringWithFormat:@" %@", player.playerName];
         posLabel.text = [NSString stringWithFormat:@"%d", player.playerPosition];
     }
 }
@@ -231,6 +233,18 @@ static const int PLAYER_POS_TAG_START = 200;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     _scrollView.delegate = self;
+}
+
+#pragma mark - Label Adjustment
+
+- (void)addPadding:(CGFloat)padding toLabel:(UILabel *)label
+{
+    CGRect frame = label.frame;
+    frame.origin.x -= padding;
+    frame.origin.y -= padding;
+    frame.size.width += padding * 2;
+    frame.size.height += padding * 2;
+    label.frame = frame;
 }
 
 @end
