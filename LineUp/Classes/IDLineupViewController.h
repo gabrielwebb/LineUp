@@ -18,6 +18,9 @@
     IBOutlet UILabel *_dateLabel;
     IBOutlet UIImageView *_homeImage;
     IBOutlet UIImageView *_awayImage;
+    
+    IBOutlet UIImageView *_notPostedImageView;
+    IBOutlet UIImageView *_notScheduledImageView;
 }
 
 - (void) reloadData;

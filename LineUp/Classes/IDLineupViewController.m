@@ -27,8 +27,9 @@ static const int PLAYER_POS_TAG_START = 200;
     UIView *_defaultImage;
 }
 
-- (void) updateContent;
+- (void)updateContent;
 - (void)addPadding:(CGFloat)padding toLabel:(UILabel *)label;
+- (BOOL)noGameToday:(IDTeamInfo *)team;
 
 @end
 
@@ -180,6 +181,11 @@ static const int PLAYER_POS_TAG_START = 200;
 {
     IDTeamInfo *team = [IDAppModel sharedModel].currentTeamInfo;
     
+    if ([self noGameToday:team]) return;
+    
+    _notPostedImageView.hidden = YES;
+    _notScheduledImageView.hidden = YES;
+    
     _opponentLabel.text = [NSString stringWithFormat:@" %@", team.opponentName];
     _dateLabel.text = team.gameDateString;
     
@@ -245,6 +251,65 @@ static const int PLAYER_POS_TAG_START = 200;
     frame.size.width += padding * 2;
     frame.size.height += padding * 2;
     label.frame = frame;
+}
+
+#pragma mark - Conditions for no game
+
+- (BOOL)noGameToday:(IDTeamInfo *)team
+{
+    NSString *dateString = [[[team.gameDateString stringByReplacingOccurrencesOfString:@" " withString:@""] componentsSeparatedByString:@"•"] objectAtIndex:0];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yy"];
+    NSDate *gameDate = [formatter dateFromString:dateString];
+    
+    NSDate *today = [NSDate date];
+    today = [formatter dateFromString:[formatter stringFromDate:today]];
+    
+    // If the current lineup is not today, let's see why
+    if (![gameDate isEqualToDate:today])
+    {
+        BOOL offToday = NO;
+        
+        // Check to see if they aren't playing
+        NSArray *daysOff = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"DaysOff" withExtension:@"plist"]];
+        for (NSString *dayOff in daysOff)
+        {
+            NSDate *dateOff = [formatter dateFromString:[NSString stringWithFormat:@"%@/12", dayOff]];
+            if ([dateOff isEqualToDate:today])
+            {
+                offToday = YES;
+            }
+        }
+        
+        // Clear the labels
+        _opponentLabel.text = @"";
+        _dateLabel.text = @"";
+        
+        _homeImage.hidden = YES;
+        _awayImage.hidden = YES;
+        
+        for(IDPlayerInfo *player in team.lineup)
+        {
+            UILabel *nameLabel = (UILabel *)[self.view viewWithTag:PLAYER_NAME_TAG_START + player.playerIndex];
+            UILabel *posLabel = (UILabel *)[self.view viewWithTag:PLAYER_POS_TAG_START + player.playerIndex];
+            
+            nameLabel.text = @"";
+            posLabel.text = @"";
+        }
+        
+        if (offToday)
+        {
+            _notScheduledImageView.hidden = NO;
+        }
+        else
+        {
+            _notPostedImageView.hidden = NO;
+        }
+        
+        return YES;
+    }
+     
+    return NO;
 }
 
 @end

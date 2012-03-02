@@ -25,11 +25,25 @@
 {
 #ifdef DEBUG
     UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"Um2CcQYLT1e20Bu-HFIrOA" applicationSecret:@"kyekICebTaO9oczWplQgWg"];
-    [manager registerDeviceToken:deviceToken];
-#else
-    UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"kwLyELSITwW_OrIdHOB5wg" applicationSecret:@"DOt2cOo7SrGJT515jH-VNw"];
+    manager.delegate = self;
     [manager registerDeviceToken:deviceToken];
 #endif
+    
+#ifdef RELEASE
+    UADeviceManager *manager = [UADeviceManager sharedManagerWithApplicationKey:@"kwLyELSITwW_OrIdHOB5wg" applicationSecret:@"DOt2cOo7SrGJT515jH-VNw"];
+    manager.delegate = self;
+    [manager registerDeviceToken:deviceToken];
+#endif
+}
+
+- (void) manager:(UADeviceManager *)manager didRegisterWithResponse:(NSString *)response
+{
+    NSLog(@"SUCCESS : %@", response);
+}
+
+- (void) manager:(UADeviceManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"FAIL : %@", error.localizedDescription);
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
