@@ -270,6 +270,9 @@ static const int PLAYER_POS_TAG_START = 200;
     {
         BOOL offToday = NO;
         
+        NSDate *firstDate = [formatter dateFromString:@"4/3/12"];
+        NSDate *lastDate = [formatter dateFromString:@"10/3/12"];
+        
         // Check to see if they aren't playing
         NSArray *daysOff = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"DaysOff" withExtension:@"plist"]];
         for (NSString *dayOff in daysOff)
@@ -297,7 +300,7 @@ static const int PLAYER_POS_TAG_START = 200;
             posLabel.text = @"";
         }
         
-        if (offToday)
+        if (offToday || [today timeIntervalSince1970] < [firstDate timeIntervalSince1970] || [today timeIntervalSince1970] > [lastDate timeIntervalSince1970])
         {
             _notScheduledImageView.hidden = NO;
         }
