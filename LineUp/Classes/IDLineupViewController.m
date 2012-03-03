@@ -55,7 +55,7 @@ static const int PLAYER_POS_TAG_START = 200;
     }
     
     // Set the date label's font
-    _dateLabel.font = [UIFont fontWithName:@"Avenir" size:15.0];
+    _dateLabel.font = [UIFont fontWithName:@"Avenir" size:13.0];
     _dateLabel.text = @"";
 	
     // Set the size of the scrollview so it can scroll vertically
@@ -270,7 +270,7 @@ static const int PLAYER_POS_TAG_START = 200;
     {
         BOOL offToday = NO;
         
-        NSDate *firstDate = [formatter dateFromString:@"4/3/12"];
+        NSDate *firstDate = [formatter dateFromString:@"3/3/12"];
         NSDate *lastDate = [formatter dateFromString:@"10/3/12"];
         
         // Check to see if they aren't playing
