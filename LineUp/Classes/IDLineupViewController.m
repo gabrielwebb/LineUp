@@ -92,6 +92,8 @@ static const int PLAYER_POS_TAG_START = 200;
 
 - (void) reloadData
 {
+    [self updateContent];
+    
     _refreshing = YES;
     _headerView.state = IDRefreshHeaderStateRefreshing;
 	[_activityIndicator startAnimating];

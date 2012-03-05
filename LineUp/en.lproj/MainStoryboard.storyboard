@@ -176,11 +176,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="center" image="Reds.png" id="nyT-1k-nLx">
-                                        <rect key="frame" x="108" y="13" width="91" height="72"/>
+                                        <rect key="frame" x="115" y="12" width="91" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="date" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="m1N-JY-qjW">
-                                        <rect key="frame" x="25" y="92" width="244" height="22"/>
+                                        <rect key="frame" x="38" y="92" width="244" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
