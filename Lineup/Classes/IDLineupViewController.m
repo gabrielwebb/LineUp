@@ -199,7 +199,7 @@ static const int PLAYER_POS_TAG_START = 200;
     else
     {
         _homeImage.hidden = YES;
-        _homeImage.hidden = NO;
+        _awayImage.hidden = NO;
     }
     
     for(IDPlayerInfo *player in team.lineup)
