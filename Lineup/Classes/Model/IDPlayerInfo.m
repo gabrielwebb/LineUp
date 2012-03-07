@@ -23,7 +23,7 @@
     {
         self.playerIndex = [aDecoder decodeIntForKey:@"playerIndex"];
         self.playerName = [aDecoder decodeObjectForKey:@"playerName"];
-        self.playerPosition = [aDecoder decodeIntForKey:@"playerPosition"];
+        self.playerPosition = [aDecoder decodeObjectForKey:@"playerPosition"];
     }
     
     return self;
@@ -33,7 +33,7 @@
 {
     [aCoder encodeInt:self.playerIndex forKey:@"playerIndex"];
     [aCoder encodeObject:self.playerName forKey:@"playerName"];
-    [aCoder encodeInt:self.playerPosition forKey:@"playerPosition"];
+    [aCoder encodeObject:self.playerPosition forKey:@"playerPosition"];
 }
 
 @end

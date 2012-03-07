@@ -134,7 +134,7 @@ static const int PLAYER_POS_TAG_START = 200;
                 {
                     IDPlayerInfo *player = [[IDPlayerInfo alloc] init];
                     player.playerName = [playerJSON objectForKey:@"name"];
-                    player.playerPosition = [[playerJSON objectForKey:@"pos"] intValue];
+                    player.playerPosition = [playerJSON objectForKey:@"pos"];
                     player.playerIndex = index;
                     
                     index++;
@@ -208,7 +208,7 @@ static const int PLAYER_POS_TAG_START = 200;
         UILabel *posLabel = (UILabel *)[self.view viewWithTag:PLAYER_POS_TAG_START + player.playerIndex];
         
         nameLabel.text = [NSString stringWithFormat:@" %@", player.playerName];
-        posLabel.text = [NSString stringWithFormat:@"%d", player.playerPosition];
+        posLabel.text = player.playerPosition;
     }
 }
 

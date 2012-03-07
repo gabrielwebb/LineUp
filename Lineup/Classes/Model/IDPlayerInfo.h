@@ -12,6 +12,6 @@
 
 @property (nonatomic) int playerIndex;                  // Index of the player on the list, sorted
 @property (nonatomic, strong) NSString *playerName;
-@property (nonatomic) int playerPosition;               // Position displayed next to the player's name
+@property (nonatomic, strong) NSString *playerPosition;               // Position displayed next to the player's name
 
 @end
